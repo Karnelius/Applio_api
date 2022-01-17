@@ -1,5 +1,6 @@
 package com.company;
 
+import java.io.FileWriter;
 import java.io.IOException;
 
 import static com.company.Api_requests.*;
@@ -54,6 +55,20 @@ public class Main {
         System.out.println(gson_formatter_post(API_COMFORT_LATEST_CO2));
         System.out.println("\n");
 
+
+        try {
+            FileWriter myWriter = new FileWriter("Data.txt");
+            myWriter.write(gson_formatter_post_intervalls(api_post_request_7days_interval(API_DRAGINO_INTERVAL_TEMP)));
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+}
+
         /*
 
         System.out.println("-------- Last Weeks Temperature --------");
@@ -99,5 +114,3 @@ public class Main {
         System.out.println("\n");
 
         */
-    }
-}

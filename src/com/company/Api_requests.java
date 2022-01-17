@@ -11,7 +11,7 @@ import java.util.HashMap;
 
 public class Api_requests {
 
-    final private static String API_KEY = "no no no";
+    final private static String API_KEY = "No no no";
 
 
     static String api_get_request(String Api_urls) throws IOException, InterruptedException,IllegalStateException {
