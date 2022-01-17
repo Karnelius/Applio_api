@@ -2,11 +2,9 @@ package com.company;
 
 import java.io.FileWriter;
 import java.io.IOException;
-
 import static com.company.Api_requests.*;
 import static com.company.Gson_formatter.*;
 import static com.company.Urls.*;
-
 
 public class Main {
 
@@ -14,6 +12,7 @@ public class Main {
     public static void main(String[] args) throws IOException, InterruptedException, IllegalStateException {
 
         /*
+        //Test
         System.out.println("\n");
         System.out.println("-------- Test without gson-formatter --------");
         System.out.println(api_get_request("https://data.applio.tech/data/device/a84041868182d48b/latest"));
@@ -22,7 +21,6 @@ public class Main {
         System.out.println("\n");
 
         */
-
 
         System.out.println("-------- Devices --------");
         System.out.println(api_get_request(API_ALL_DEVICES));
@@ -54,20 +52,6 @@ public class Main {
         System.out.println("-------- Latest Co2 --------");
         System.out.println(gson_formatter_post(API_COMFORT_LATEST_CO2));
         System.out.println("\n");
-
-
-        try {
-            FileWriter myWriter = new FileWriter("Data.txt");
-            myWriter.write(gson_formatter_post_intervalls(api_post_request_7days_interval(API_DRAGINO_INTERVAL_TEMP)));
-            myWriter.close();
-            System.out.println("Successfully wrote to the file.");
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-    }
-
-}
 
         /*
 
@@ -114,3 +98,23 @@ public class Main {
         System.out.println("\n");
 
         */
+
+        var a = api_post_request_7days_interval((API_DRAGINO_INTERVAL_TEMP));
+        writeToFile(gson_formatter_post_intervalls(a));
+
+    }
+
+    private static void writeToFile(String data_to_write) {
+            try {
+                FileWriter myWriter = new FileWriter("Data.txt");
+                myWriter.write(data_to_write);
+                myWriter.close();
+                System.out.println("Successfully wrote to the file.");
+            } catch (IOException e) {
+                System.out.println("An error occurred.");
+                e.printStackTrace();
+            }
+        }
+    }
+
+

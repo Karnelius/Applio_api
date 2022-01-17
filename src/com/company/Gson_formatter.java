@@ -1,10 +1,8 @@
 package com.company;
 
 import com.google.gson.Gson;
-
 import java.util.Arrays;
 import java.io.IOException;
-
 import static com.company.Api_requests.api_get_request;
 import static com.company.Api_requests.api_post_request;
 

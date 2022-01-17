@@ -213,4 +213,5 @@
  [dev-id = a84041868182d48b -  recieve date 2022-01-17T13:46:24 -  type temperature -  data 22.40], 
  [dev-id = a84041868182d48b -  recieve date 2022-01-17T14:06:24 -  type temperature -  data 22.26], 
  [dev-id = a84041868182d48b -  recieve date 2022-01-17T14:26:24 -  type temperature -  data 22.19], 
- [dev-id = a84041868182d48b -  recieve date 2022-01-17T14:46:24 -  type temperature -  data 22.13]]
+ [dev-id = a84041868182d48b -  recieve date 2022-01-17T14:46:24 -  type temperature -  data 22.13], 
+ [dev-id = a84041868182d48b -  recieve date 2022-01-17T15:06:24 -  type temperature -  data 22.26]]
