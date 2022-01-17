@@ -103,7 +103,7 @@ public class Main {
         writeToFile(gson_formatter_post_intervalls(a));
 
     }
-
+    // Will only work with multiple line data.
     private static void writeToFile(String data_to_write) {
             try {
                 FileWriter myWriter = new FileWriter("Data.txt");
