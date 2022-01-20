@@ -11,7 +11,7 @@ import java.util.HashMap;
 
 public class Api_requests {
 
-    final private static String API_KEY = "no no no ";
+    final private static String API_KEY = "no no no";
 
 
 
@@ -85,5 +85,4 @@ public class Api_requests {
         HttpResponse<String> response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
         return response.body();
     }
-
 }

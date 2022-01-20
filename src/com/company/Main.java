@@ -1,8 +1,6 @@
 package com.company;
 
-import java.io.FileWriter;
 import java.io.IOException;
-import static com.company.Api_requests.*;
 import static com.company.Gson_formatter.*;
 import static com.company.Urls.*;
 
@@ -23,7 +21,7 @@ public class Main {
         */
 
         System.out.println("-------- Devices --------");
-        System.out.println(api_get_request(API_ALL_DEVICES));
+        System.out.println(gson_formatter_get_devices(API_ALL_DEVICES));
         System.out.println("--------------------------------------------------------");
         System.out.println("\n");
 
@@ -43,6 +41,7 @@ public class Main {
         System.out.println("--------------------------------------------------------");
         System.out.println("\n");
 
+        /*
         System.out.println("-------- Latest Humidity --------");
         System.out.println(gson_formatter_post(API_DRAGINO_LATEST_HUM));
         System.out.println(gson_formatter_post(API_COMFORT_LATEST_HUM));
@@ -97,12 +96,13 @@ public class Main {
         System.out.println(gson_formatter_post_intervalls(rrr));
         System.out.println("\n");
 
-        */
+
 
         var a = api_post_request_7days_interval((API_DRAGINO_INTERVAL_TEMP));
         writeToFile(gson_formatter_post_intervalls(a));
 
     }
+
     // Will only work with multiple line data.
     private static void writeToFile(String data_to_write) {
             try {
@@ -114,6 +114,8 @@ public class Main {
                 System.out.println("An error occurred.");
                 e.printStackTrace();
             }
+
+         */
         }
     }
 
